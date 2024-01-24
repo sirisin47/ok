@@ -22,7 +22,7 @@ if(st.button("แสดงข้อมูลตัวอย่าง")):
 else:
     st.button("ไม่แสดงข้อมูลตัวอย่าง")
 
-    if(st.button("แสดงกราฟแท่ง")):
+if(st.button("แสดงกราฟแท่ง")):
         chart_data = pd.DataFrame(
     {
         "ประเภทดอกไม้": df['variety'],
