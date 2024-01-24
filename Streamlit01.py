@@ -1,30 +1,26 @@
 import streamlit as st
 import pandas as pd
-
 st.title("การทดสอบสร้างเว็บด้วยPython")
 st.image("data.jpeg")
-st.header("การนำเสนอข้อมูลกราฟด้วย Python")
-
+st.header("การนำเสนอข้อมูลกราฟด้วย Python") 
 col1, col2, col3 = st.columns(3)
 
-with col1: 
+with col1:
     st.header("Versicolor")
-    st.image("./img/Versicolor.jpg")
+    st.image("./img2/Versicolor.jpg")
 with col2:
     st.header("Verginica")
-    st.image("./img/Verginica.jpg")
+    st.image("./img2/virginica.jpg")
 with col3:
     st.header("Setosa")
-    st.image("./img/Setosa.jpg")
-
+    st.image("./img2/Sentosa.jpg")
 df=pd.read_csv("./data/iris.csv")
-#st.write(df.head(10))
 
 if(st.button("แสดงข้อมูลตัวอย่าง")):
     st.write(df.head(10))
     st.button("ไม่แสดงข้อมูลตัวอย่าง")
 else:
-    st.button("ไม่แสดงตัวอย่าง")
+    st.button("ไม่แสดงข้อมูลตัวอย่าง")
 
 if(st.button("แสดงกราฟแท่ง")):
     chart_data = pd.DataFrame(
@@ -41,16 +37,13 @@ else:
 
     import matplotlib.pyplot as plt
 
-# Pie
+# Pie 
 labels = 'sepal.width', 'sepal.length', 'petal.width', 'petal.length'
-
 x1=df['sepal.width'].mean()
 x2=df['sepal.length'].mean()
 x3=df['petal.width'].mean()
 x4=df['petal.length'].mean()
-
 sizes = [x1, x2, x3, x4]
-
 explode = (0, 0.1, 0, 0)  # only "explode" the 2nd slice (i.e. 'Hogs')
 
 fig1, ax1 = plt.subplots()
@@ -58,9 +51,8 @@ ax1.pie(sizes, explode=explode, labels=labels, autopct='%1.1f%%',
         shadow=True, startangle=90)
 #ax1.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
 
-if(st.button("แสดงข้อมูล")):
-    st.pyplot(fig1)
-    st.button("ไม่แสดงข้อมูล")
+st.pyplot(fig1)
 
-else:
-    st.button("ไม่แสดงข้อมูล")
+st.button("ไม่แสดงกราฟวงกลม")
+else
+    st.button("ไม่แสดงกราฟวงกลม")
