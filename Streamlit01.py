@@ -10,7 +10,7 @@ with col1:
     st.image("./img2/Versicolor.jpg")
 with col2:
     st.header("Verginica")
-    st.image("./img2/Verginica.jpg")
+    st.image("./img2/virginica.jpg")
 with col3:
     st.header("Setosa")
     st.image("./img2/Sentosa.jpg")
