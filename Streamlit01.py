@@ -23,7 +23,7 @@ else:
     st.button("ไม่แสดงข้อมูลตัวอย่าง")
 
 if(st.button("แสดงกราฟแท่ง")):
-        chart_data = pd.DataFrame(
+    chart_data = pd.DataFrame(
     {
         "ประเภทดอกไม้": df['variety'],
         "ความกว้าง": df['sepal.width'],
